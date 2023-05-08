@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Web - Calc</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <h1>Web - Calc</h1>
+  <header>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="contacts.html">Contact</a></li>
+    </ul>
+  </header>
+  <div class="container">
+    <div class="content">
+      <div id="describe">
+        <h2>Hai, selamat datang di Web - Calc</h2>
+      </div>
+
+      <div id="standar">
+        <p>
+          Ini adalah kalkulator standar sederhana untuk melakukan perhitungan.
+        </p>
+        <div class="input-standar">
+          <input id="input1" type="number" placeholder="Input number">
+          <span class="action-result"></span>
+          <input id="input2" type="number" placeholder="Input number">
+        <div class="action">
+          <button id="add">+</button>
+          <button id="sub">-</button>
+          <button id="multiple">x</button>
+          <button id="divide">:</button>
+          <button id="equal">=</button>
+        </div>
+        </div>
+        <div class="hasil"><p>hasil</p></div>
+      </div>
+
+      <div id="bmi">
+        <p>Indeks massa tubuh (body mass indeks) atau disingkat 
+          BMI adalah pengukuran yang digunakan untuk menentukan 
+          golongan berat badan sehat dan tidak sehat.
+        </p>
+        <div class="input-bmi">
+          <label class="label-bmi" for="height">Input tinggi badan</label>
+          <input class="input-field-bmi" id="inputHeight" type="number" placeholder="satuan (cm)">
+          <label class="label-bmi" for="weight">Input berat badan</label>
+          <input class="input-field-bmi" id="inputWeight" type="number" placeholder="satuan (kg)">
+          <button class="btn-submit-bmi" type="submit">Submit</button>
+        </div>
+        <div class="result-bmi"><p>hasil</p></div>
+        <div class="result-bmi-category"></div>
+        <div class="standar-bmi">
+          <h5>Standar BMI menurut = WHO</h5>
+          <ul>
+            <li><p><18,5 = kurus </p></li>
+            <li><p>18,5 – 22,9 = normal</p></li>
+            <li><p>23 - 29.9 = gemuk</p></li>
+            <li><p>>30 = obesitas</p></li>
+          </ul>
+        </div>
+      </div>
+
+      <div id="temperature">
+        <p>
+          Kalkulator ini untuk menghitung konversi suhu.
+        </p>
+      </div>
+    </div>
+
+    <div class="aside">
+      <p>Pilih kalkulator yang ingin digunakan</p>
+        <div class="menu">
+          <ul>
+            <li id="calc-standar" class="calc-menu">Standar</li>
+            <li id="calc-bmi">BMI</li>
+            <li id="calc-temp">Temperature</li>
+          </ul>
+        </div>
+    </div>
+  </div>
+
+<script src="script.js"></script>
+</body>
+</html>
