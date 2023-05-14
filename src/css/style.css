@@ -1,9 +1,10 @@
 * {
-  font-family: "Roboto Mono", monospace;
+  font-family: 'Roboto Mono', monospace;
   margin: 0;
   padding: 0;
   text-decoration: none;
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   list-style: none;
 }
 
@@ -13,26 +14,33 @@ h1 {
 }
 
 header ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
-  -moz-column-gap: 50px;
-       column-gap: 50px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-column-gap: 50px;
+          column-gap: 50px;
 }
 
 .container {
   margin: 40px 10px 0 0;
 }
+
 .container .content {
   position: relative;
   float: left;
   width: 65%;
   height: 450px;
 }
+
 .container .content #describe {
   position: absolute;
   top: 30px;
   right: 200px;
 }
+
 .container .content #standar {
   right: 100px;
   top: 20px;
@@ -43,12 +51,15 @@ header ul {
   display: none;
   border-radius: 20px;
 }
+
 .container .content #standar p {
   padding: 10px;
 }
+
 .container .content #standar .input-standar {
   margin: 20px;
 }
+
 .container .content #standar .input-standar input {
   width: 150px;
   height: 30px;
@@ -57,14 +68,17 @@ header ul {
   padding: 10px;
   font-size: 16px;
 }
+
 .container .content #standar .action {
   margin: 20px 0;
 }
+
 .container .content #standar .action button {
   font-size: 20px;
   width: 30px;
   height: 30px;
 }
+
 .container .content #standar .hasil {
   overflow: hidden;
   width: 150px;
@@ -75,10 +89,12 @@ header ul {
   text-align: center;
   background-color: white;
 }
+
 .container .content #standar .hasil p {
   opacity: 0.5;
   line-height: 10px;
 }
+
 .container .content #bmi {
   position: absolute;
   right: 100px;
@@ -91,18 +107,27 @@ header ul {
   text-align: justify;
   display: none;
 }
+
 .container .content #bmi p {
   margin-bottom: 10px;
 }
+
 .container .content #bmi .input-bmi {
   height: 200px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   margin-top: 20px;
 }
+
 .container .content #bmi .input-bmi .label-bmi {
   margin-bottom: 5px;
 }
+
 .container .content #bmi .input-bmi .input-field-bmi {
   margin-bottom: 20px;
   width: 150px;
@@ -113,21 +138,23 @@ header ul {
   text-align: center;
   font-size: 16px;
 }
+
 .container .content #bmi .input-bmi .btn-submit-bmi {
   width: 150px;
   height: 30px;
-  background-color: rgb(154, 233, 154);
+  background-color: #9ae99a;
   color: black;
   border: 1px solid black;
   border-radius: 5px;
   cursor: pointer;
   font-size: 16px;
 }
+
 .container .content #bmi .result-bmi {
   position: absolute;
   width: 150px;
   height: 30px;
-  background-color: rgb(183, 223, 241);
+  background-color: #b7dff1;
   color: black;
   border: 1px solid black;
   border-radius: 5px;
@@ -135,9 +162,11 @@ header ul {
   line-height: 30px;
   z-index: 2;
 }
+
 .container .content #bmi .result-bmi p {
   opacity: 0.5;
 }
+
 .container .content #bmi .result-bmi-category {
   display: none;
   position: absolute;
@@ -145,14 +174,16 @@ header ul {
   bottom: 56px;
   width: 100px;
   height: 30px;
-  background-color: rgb(183, 223, 241);
+  background-color: #b7dff1;
   color: black;
   border: 1px solid black;
   border-radius: 5px;
   text-align: center;
   line-height: 30px;
-  animation: animateResultUser 1s ease;
+  -webkit-animation: animateResultUser 1s ease;
+          animation: animateResultUser 1s ease;
 }
+
 .container .content #bmi .standar-bmi {
   display: none;
   background-color: aquamarine;
@@ -163,14 +194,29 @@ header ul {
   bottom: 150px;
   right: 20px;
   word-spacing: -5px;
-  animation: animateStandarBMI 1s ease;
+  -webkit-animation: animateStandarBMI 1s ease;
+          animation: animateStandarBMI 1s ease;
 }
+
 .container .content #bmi .standar-bmi h5 {
   margin-bottom: 10px;
 }
+
 .container .content #bmi .standar-bmi ul li {
   line-height: 10px;
 }
+
+@-webkit-keyframes animateStandarBMI {
+  0% {
+    opacity: 0;
+    bottom: 200px;
+  }
+  100% {
+    opacity: 1;
+    bottom: 150px;
+  }
+}
+
 @keyframes animateStandarBMI {
   0% {
     opacity: 0;
@@ -181,6 +227,17 @@ header ul {
     bottom: 150px;
   }
 }
+
+@-webkit-keyframes animateResultUser {
+  0% {
+    opacity: 0;
+    left: 100px;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
 @keyframes animateResultUser {
   0% {
     opacity: 0;
@@ -190,28 +247,34 @@ header ul {
     opacity: 1;
   }
 }
+
 .container .content #temperature {
   display: none;
 }
-.container .content #temperature p {
-  text-align: center;
-  align-items: center;
-}
+
 .container .aside {
   padding-top: 30px;
 }
+
 .container .aside p {
   text-indent: 30px;
   margin-bottom: 20px;
 }
+
 .container .aside .menu ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   background-color: aquamarine;
   border-radius: 5px;
   display: flex;
 }
+
 .container .aside .menu ul li {
   background-color: antiquewhite;
   padding: 20px;
@@ -239,19 +302,24 @@ header ul {
   padding: 30px;
   text-align: justify;
 }
+
 .container-contact ul li {
   margin: 5px;
 }
+
 .container-contact ul li .list-contact {
   margin: 10px;
   padding: 5px;
 }
+
 .container-contact ul li .list-contact img {
   border-radius: 50%;
   border: none;
   width: 30px;
   height: 30px;
 }
+
 .container-contact ul li .list-contact a {
   color: black;
-}/*# sourceMappingURL=style.css.map */
+}
+/*# sourceMappingURL=style.css.map */

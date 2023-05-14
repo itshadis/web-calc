@@ -220,6 +220,11 @@ header ul {
     // start css suhu calculator
     #temperature {
       display: none;
+      
+      p {
+        text-align: center;
+        align-items:center ;
+      }
     }
     // end css suhu calculator
   }
